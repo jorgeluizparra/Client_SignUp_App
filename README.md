@@ -1,4 +1,4 @@
-# triyo-client
+# Client Manager System
 
 ## Project setup
 ```
