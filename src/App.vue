@@ -1,8 +1,17 @@
 <template>
   <div id="app">
+    <nav-bar />
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  components: {
+    'nav-bar': require('./components/Navbar.vue').default
+  }
+}
+</script>
 
 <style>
 #app {
