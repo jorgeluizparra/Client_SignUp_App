@@ -2,7 +2,7 @@
   <el-row>
     <el-col :span="24">
       <div class="grid-content bg-purple-dark">
-        <h2>Sistema de cadastro de cliente</h2>
+        <h2>SISTEMA DE CADASTRO DE CLIENTES</h2>
       </div>
     </el-col>
     <el-col :span="24">
@@ -30,6 +30,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    handleClick(tab) {
+      this.$router.push(tab.$attrs.to);
+    }
   }
 }
 </script>
@@ -49,9 +54,15 @@ export default {
       }
       .bg-purple-dark {
         background: #99a9bf;
+        color: white;
       }
       .grid-content {
         padding: 20px;
+      }
+      .el-tabs {
+        .el-tabs__nav-scroll{
+          padding: 0 20px;
+        }
       }
     }
   }
