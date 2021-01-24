@@ -1,6 +1,6 @@
 <template>
   <div class="add-client">
-    <new-client-form :form="newClientForm" />
+    <new-client-form :form="newClientForm" :codeField="false" />
   </div>
 </template>
 

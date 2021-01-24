@@ -2,7 +2,7 @@
     <div class="new-client-form">
         <el-form ref="form" :model="form" >
             <el-form-item>
-                <el-input v-model="form.code" placeholder="Código do cliente" />
+                <el-input :disabled="codeField" v-model="form.code" placeholder="Código do cliente" />
             </el-form-item>
             <el-form-item>
                 <el-input v-model="form.name" placeholder="Nome completo" />
@@ -38,7 +38,8 @@ export default {
         'new-dependent-dialog': require('../components/NewDependentDialog.vue').default
     },
     props: {
-      form: Object 
+      form: Object,
+      codeField: Boolean
     },
     methods: {
         ...mapActions(['addDependent', 'saveNewClient']),

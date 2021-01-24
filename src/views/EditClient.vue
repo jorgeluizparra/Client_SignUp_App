@@ -1,6 +1,6 @@
 <template>
   <div class="add-client">
-    <edit-client-form :form="editClientForm" />
+    <edit-client-form :form="editClientForm" :codeField="true" />
   </div>
 </template>
 
