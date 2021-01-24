@@ -1,5 +1,18 @@
 <template>
-  <div class="edit-client">
-    <h1>This is the edit-client page</h1>
+  <div class="add-client">
+    <edit-client-form :form="editClientForm" />
   </div>
 </template>
+
+<script>
+import { mapGetters } from "vuex"
+
+export default {
+  components: {
+    'edit-client-form': require('../components/ClientForm.vue').default
+  },
+  computed: {
+    ...mapGetters(['editClientForm'])
+  },
+}
+</script>

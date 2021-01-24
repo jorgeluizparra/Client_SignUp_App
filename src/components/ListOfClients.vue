@@ -17,11 +17,11 @@
       </el-table-column>
       <el-table-column
         label="Operações">
-        <template>
-          <el-button @click="handleClick" type="text">
+        <template slot-scope="scope">
+          <el-button @click="setEditClient(scope.$index, clients)" type="text">
             <i class="el-icon-folder-opened"></i>
           </el-button>
-          <el-button @click="handleClick" type="text">
+          <el-button @click="deleteClient(scope.$index, clients)" type="text">
             <i class="el-icon-delete"></i>
           </el-button>
         </template>
@@ -31,11 +31,16 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'ListOfClients',
   props: {
     clients: Array
-  }
+  },
+  methods: {
+    ...mapActions(['deleteClient', 'setEditClient'])
+  },
 }
 </script>
 

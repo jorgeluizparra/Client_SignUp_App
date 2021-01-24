@@ -1,5 +1,18 @@
 <template>
   <div class="add-client">
-    <h1>This is the add-client page</h1>
+    <new-client-form :form="newClientForm" />
   </div>
 </template>
+
+<script>
+import { mapGetters } from "vuex"
+
+export default {
+  components: {
+    'new-client-form': require('../components/ClientForm.vue').default
+  },
+  computed: {
+    ...mapGetters(['newClientForm'])
+  },
+}
+</script>
